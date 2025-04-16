@@ -9,15 +9,19 @@ public class IfNestedExample {
         System.out.println("점수: " + score);
 
         String grade;
-        if(score >= 95){
-            System.out.println("학점: A");
-        }else if(score >= 90){
-            System.out.println("학점: B");
-        } else if(score >= 85){
-            System.out.println("학점: C");
+        if(score >= 90){
+            if(score>=95){
+                grade = "A+";
+            }else{
+                grade ="A";
+            }
         }else{
-            System.out.println("학점: D");
-            System.out.println("hhihih");
+            if(score >= 85){
+                grade = "B+";
+            }else{
+                grade ="B";
+            }
         }
+        System.out.println("학점: " + grade);
     }
 }
